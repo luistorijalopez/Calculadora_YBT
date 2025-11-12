@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2487.7">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!doctype html&gt;</p>
+<p class="p1">&lt;html lang="es"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="utf-8" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width,initial-scale=1" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;Calculadora YBT&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;padding:24px;background:#0f172a;color:#e5e7eb}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>h1{margin:0 0 8px}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.card{max-width:900px;margin:0 auto;background:#0b1220;border:1px solid #1f2937;border-radius:14px;padding:16px}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>label{font-size:12px;color:#94a3b8}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>input,select{width:100%;padding:10px;border-radius:10px;border:1px solid #1f2937;background:#0b1220;color:#e5e7eb}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:12px}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.kpi{background:#111827;border:1px solid #1f2937;border-radius:12px;padding:10px}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.kpi .lab{font-size:12px;color:#94a3b8}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.kpi .val{font-size:22px;font-weight:700}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.status{margin-top:12px;padding:10px;border-radius:10px;border:1px solid #1f2937;display:inline-block}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.azul{background:rgba(59,130,246,.18);color:#bfdbfe}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.verde{background:rgba(34,197,94,.18);color:#bbf7d0}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.naranja{background:rgba(245,158,11,.18);color:#fde68a}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.rojo{background:rgba(239,68,68,.18);color:#fecaca}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>@media (max-width:800px){ .row,.kpis{grid-template-columns:repeat(2,1fr)} }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>@media (max-width:520px){ .row,.kpis{grid-template-columns:1fr} }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h1&gt;Calculadora Y-Balance Test (YBT)&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p style="color:#94a3b8;margin:6px 0 16px"&gt;Introduce medidas y obtén alcances normalizados, Composite y semáforo por sexo+edad.&lt;/p&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h3&gt;Datos&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label&gt;Sexo&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;select id="sexo"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;option&gt;Hombre&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;option&gt;Mujer&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/select&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label&gt;Edad (años: 12–17)&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;input type="number" id="edad" value="14" min="12" max="17" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label&gt;Longitud pierna (cm)&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;input type="number" id="len" value="90" step="0.1" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h3 style="margin-top:14px"&gt;Alcances (cm)&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label&gt;Anterior (A)&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;input type="number" id="A" value="72" step="0.1" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label&gt;Posteromedial (PM)&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;input type="number" id="PM" value="84" step="0.1" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label&gt;Posterolateral (PL)&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;input type="number" id="PL" value="80" step="0.1" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="kpis"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="kpi"&gt;&lt;div class="lab"&gt;A normalizado (%)&lt;/div&gt;&lt;div class="val" id="Anorm"&gt;—&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="kpi"&gt;&lt;div class="lab"&gt;PM normalizado (%)&lt;/div&gt;&lt;div class="val" id="PMnorm"&gt;—&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="kpi"&gt;&lt;div class="lab"&gt;PL normalizado (%)&lt;/div&gt;&lt;div class="val" id="PLnorm"&gt;—&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="kpi"&gt;&lt;div class="lab"&gt;Composite Score (%)&lt;/div&gt;&lt;div class="val" id="CS"&gt;—&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="kpis"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="kpi"&gt;&lt;div class="lab"&gt;Asimetría A (cm)&lt;/div&gt;&lt;div class="val" id="asymA"&gt;0.0&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="kpi"&gt;&lt;div class="lab"&gt;Asimetría PM (cm)&lt;/div&gt;&lt;div class="val" id="asymPM"&gt;0.0&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="kpi"&gt;&lt;div class="lab"&gt;Asimetría PL (cm)&lt;/div&gt;&lt;div class="val" id="asymPL"&gt;0.0&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="kpi"&gt;&lt;div class="lab"&gt;Semáforo&lt;/div&gt;&lt;div class="val"&gt;&lt;span class="status" id="status"&gt;—&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p style="font-size:12px;color:#94a3b8;margin-top:10px"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>Fórmulas: normalizado = (alcance/longitud)*100 · Composite = (A+PM+PL)/(3*longitud)*100.</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const REF_HOMBRES = {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>"12-13": {p10:0.882, p50:0.947, p90:1.020},</p>
+<p class="p1"><span class="Apple-converted-space">      </span>"14-15": {p10:0.913, p50:0.977, p90:1.051},</p>
+<p class="p1"><span class="Apple-converted-space">      </span>"16-17": {p10:0.935, p50:1.002, p90:1.074},</p>
+<p class="p1"><span class="Apple-converted-space">    </span>};</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const REF_MUJERES = {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>"12-13": {p10:0.875, p50:0.927, p90:0.991},</p>
+<p class="p1"><span class="Apple-converted-space">      </span>"14-15": {p10:0.892, p50:0.943, p90:1.010},</p>
+<p class="p1"><span class="Apple-converted-space">      </span>"16-17": {p10:0.910, p50:0.965, p90:1.030},</p>
+<p class="p1"><span class="Apple-converted-space">    </span>};</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>const $ = id =&gt; document.getElementById(id);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const fmt = (x) =&gt; isFinite(x) ? x.toFixed(1) : "—";</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const inputs = ["sexo","edad","len","A","PM","PL"].map($);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>inputs.forEach(el =&gt; el.addEventListener("input", compute));</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function rangoEdad(e){ if(e&lt;=13) return "12-13"; if(e&lt;=15) return "14-15"; return "16-17"; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>function getRefs(sexo, edad){ return (sexo==="Hombre" ? REF_HOMBRES : REF_MUJERES)[rangoEdad(edad)]; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>function clasifica(csProp, refs){</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if(!refs || !isFinite(csProp)) return {texto:"—", clase:""};</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if(csProp &gt;= refs.p90) return {texto:"≥ P90", clase:"azul"};</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if(csProp &gt;= refs.p50) return {texto:"P50–P90", clase:"verde"};</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if(csProp &gt;= refs.p10) return {texto:"P10–P50", clase:"naranja"};</p>
+<p class="p1"><span class="Apple-converted-space">      </span>return {texto:"&lt; P10", clase:"rojo"};</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function compute(){</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const sexo=$("sexo").value, edad=parseFloat($("edad").value),</p>
+<p class="p1"><span class="Apple-converted-space">            </span>len=parseFloat($("len").value), A=parseFloat($("A").value),</p>
+<p class="p1"><span class="Apple-converted-space">            </span>PM=parseFloat($("PM").value), PL=parseFloat($("PL").value);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const An=len&gt;0?(A/len)*100:NaN, PMn=len&gt;0?(PM/len)*100:NaN, PLn=len&gt;0?(PL/len)*100:NaN,</p>
+<p class="p1"><span class="Apple-converted-space">            </span>CS=len&gt;0?((A+PM+PL)/(3*len))*100:NaN;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>$("Anorm").textContent=fmt(An); $("PMnorm").textContent=fmt(PMn);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>$("PLnorm").textContent=fmt(PLn); $("CS").textContent=fmt(CS);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const csProp=CS/100, refs=getRefs(sexo,edad), cat=clasifica(csProp,refs);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const badge=$("status"); badge.textContent=cat.texto; badge.className="status "+cat.clase;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>compute();</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
